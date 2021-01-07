@@ -1,39 +1,51 @@
 .me{
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: xx-large;
   font-weight: 700;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-body {
-  text-align: center;
-  background-color: rgb(42, 138, 138);  
+a{
+  color: rgb(245, 30, 102);
+  font-size: 30px;
 }
-#particles-js{  
+span{
+  font-size: 50px;
+}
+ 
+span:hover {
+  font-size: 65px;
+  animation: slidein .5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 1%;
+    width: 3%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 1%;
+  }
+}
+
+.particles{  
   height: 100vmax;
   width: 100%; 
   position: fixed;
   z-index: -1;
-}
-.home{
-  width: 80%;
-  position: relative;
-  border: 2px solid white;
-  z-index: 99;
   background-size: cover;
 }
-/* .prueba {
-  will-change: "transform";
-   transform: perspective(1500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)
-  } */
-
-
-/* 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.home{
+  text-align: center;
+  float: left;
+  width: 80%;
+  position: relative;
+  border: 3px solid white;
+  z-index: 99;
+  margin: 100px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.349);
+  
+}

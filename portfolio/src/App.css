@@ -1,51 +1,119 @@
-.me{
-  text-align: center;
-  font-size: xx-large;
-  font-weight: 700;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-a{
-  color: rgb(245, 30, 102);
-  font-size: 30px;
-}
-span{
-  font-size: 50px;
-}
- 
-span:hover {
-  font-size: 65px;
-  animation: slidein .5s;
-  animation-iteration-count: 1;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 1%;
-    width: 3%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 1%;
-  }
-}
-
 .particles{  
-  height: 100vmax;
-  width: 100%; 
+  width: 100%;
+  height: 100%; 
   position: fixed;
   z-index: -1;
   background-size: cover;
 }
 .home{
   text-align: center;
-  float: left;
-  width: 80%;
+  float: left; 
   position: relative;
-  border: 3px solid white;
   z-index: 99;
-  margin: 100px;
+  margin: 12%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.349);
+  background-color: rgba(0, 0, 0, 0.349);  
+}
+
+.me{ 
+  width: 90%;
+  text-align: left;
+  font-size: xx-large;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+}
+a h3{
+  color: rgb(245, 30, 102);
+  margin-right: 5px;
+}
+span{
+  font-size: 2em;
+  cursor: default
+}
+ 
+span:hover {
+  font-size: 2.5em;
+  font-weight:lighter;
+  font-variant-ligatures: historical-ligatures;
+}
+
+
+@media (max-width: 680px)  {
+  span{
+    font-size: 1em;
+  }
+   
+  span:hover {
+    font-size: 1.01em;
+  }
   
 }
+/* CARD */
+#container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.container {
+	height: 100px;
+	margin: auto;
+  width: 100px;
+  z-index: 99;
+  position: relative;
+  -webkit-perspective: 700;
+  margin: 10px;
+}
+
+.card {
+	height: 100%;
+	width: 100%;
+	transition: all 1s;
+	transform-style: preserve-3d;
+	box-shadow: 0px 0px 5px black;
+	position: absolute;
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+
+.l{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+  background:  rgba(0, 0, 0, 0.349);;
+  backface-visibility: hidden;
+  border: 1px solid white;
+}
+
+.front{ background-color:  rgba(0, 0, 0, 0.349)}
+.front h3 {
+   position: absolute;
+   font-size: 38px;
+   margin-top: 200px;
+   color: #fff;
+   
+}
+
+img { height: 100%; width: 100%; }
+
+.back{
+	height: 100%;
+	width: 100%;
+  transform: rotateY(180deg);
+  border: 1px solid white;
+}
+
+.back h3 {
+	display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+

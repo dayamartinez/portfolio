@@ -8,14 +8,13 @@ function App() {
       <Home /> 
       <ParticleAnimation  
           className='particles'
-          numParticles={300}   
+          numParticles={150}
+          color={{r: 255, g: 255, b: 255, a: 255}}  
           background={{r: 1, g: 1, b: 1, a: 1}}
-          lineWidth={0.5}
-          particleRadius={0.9}
-          particleSpeed={0.8}
+          lineWidth={0.3}
+          particleRadius={0.8}
+          particleSpeed={0.5}
           />
-
-          
     </div>
   );
 }

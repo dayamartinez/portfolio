@@ -5,6 +5,7 @@
   z-index: -1;
   background-size: cover;
 }
+/* Home */
 .home{
   text-align: center;
   float: left; 
@@ -14,7 +15,10 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.349);  
 }
-
+#me{
+  display: flex;
+  flex-direction: row;
+}
 .me{ 
   width: 90%;
   text-align: left;
@@ -25,6 +29,24 @@
   margin-bottom: 5px;
   box-sizing: border-box;
 }
+a{text-decoration: none;  font-style: italic;}
+.input-contactme{ display: flex; flex-direction: row }
+h5{ 
+  font-weight:lighter; 
+  color: rgba(255, 255, 255, 0.198);
+}
+span{
+  font-size: 2.2em;
+  font-weight:lighter;
+  font-variant-ligatures: historical-ligatures;
+  cursor: default
+}
+ 
+span:hover {
+  font-size: 2.5em;
+  
+}
+/* social */
 .social{
   display: flex;
   flex-direction: row;
@@ -33,28 +55,48 @@ a h3{
   color: rgb(245, 30, 102);
   margin-right: 5px;
 }
-span{
-  font-size: 2em;
-  cursor: default
-}
- 
-span:hover {
-  font-size: 2.5em;
-  font-weight:lighter;
-  font-variant-ligatures: historical-ligatures;
+#bar{
+  display: flex;
+  float: left; 
+  position: relative; 
 }
 
-
-@media (max-width: 680px)  {
-  span{
-    font-size: 1em;
-  }
-   
-  span:hover {
-    font-size: 1.01em;
-  }
-  
+/* contactme */
+#contactme{
+  display: flex; 
+  justify-content: space-evenly; 
+  width: 100%;
+  height: 300px;
+  box-sizing: border-box;
+  white-space: 'nowrap',
 }
+
+.contactme{  
+  display: block;
+  text-align: center;
+  margin: 5%;
+  position:absolute;
+  z-index: 99;
+  width: 750px;
+  background-color: rgba(255, 255, 255, 0.561);    
+  padding: 20px;
+  border-radius: 20px;
+}
+.contactme-form{  
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+#contactme h1, h4, p{
+  color: black; 
+  font-style: italic;
+}
+#contactme .social{
+  justify-content: center;
+  margin-top: 0;
+}
+
 /* CARD */
 #container{
   display: flex;
@@ -101,9 +143,6 @@ span:hover {
    color: #fff;
    
 }
-
-img { height: 100%; width: 100%; }
-
 .back{
 	height: 100%;
 	width: 100%;
@@ -117,3 +156,24 @@ img { height: 100%; width: 100%; }
   margin: 10px 0;
 }
 
+
+
+@media (max-width: 800px)  {
+  span{
+    font-size: 1em;
+  }
+   
+  span:hover {
+    font-size: 1.01em;
+  }
+  #me{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contactme{  
+    margin: 8%;
+    width: 100%;
+   
+  }
+ 
+}

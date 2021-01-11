@@ -7,7 +7,7 @@ export default function card(){
             <div class="container">
                 <div class="card">    
                     <div class="l front">                   
-                    <   img src={lacasa} width="80px" height="80px"/>     
+                    <img src={lacasa} alt="imagen lacasabar" height='100%' width='100%'/>     
                     </div>
                 
                     <div class="l back">                 	
@@ -18,7 +18,7 @@ export default function card(){
             <div class="container">
                 <div class="card">    
                     <div class="l front">                   
-                    <   img src={lacasa} width="80px" height="80px"/>     
+                    <img src={lacasa} alt="imagen" height='100%' width='100%'/>     
                     </div>
                 
                     <div class="l back">                 	

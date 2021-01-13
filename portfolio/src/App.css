@@ -36,14 +36,15 @@ h5{
   color: rgba(255, 255, 255, 0.198);
 }
 span{
-  font-size: 2.2em;
+  font-size: 2.3em;
   font-weight:lighter;
   font-variant-ligatures: historical-ligatures;
   cursor: default
 }
  
 span:hover {
-  font-size: 2.5em;
+  color: rgb(245, 30, 102);
+  font-weight: 900;
   
 }
 /* social */
@@ -98,64 +99,9 @@ a h3{
 }
 
 /* CARD */
-#container{
-  display: flex;
-  flex-direction: row;
-  margin-top: 5%;
-}
-.container {
-	height: 100px;
-	margin: auto;
-  width: 100px;
-  z-index: 99;
-  position: relative;
-  -webkit-perspective: 700;
-  margin: 10px;
-}
-
 .card {
-	height: 100%;
-	width: 100%;
-	transition: all 1s;
-	transform-style: preserve-3d;
-	box-shadow: 0px 0px 5px black;
-	position: absolute;
+margin: 0 40px;
 }
-
-.card:hover{
-  transform: rotateY(180deg);
-}
-
-.l{
-	position: absolute;
-	height: 100%;
-	width: 100%;
-  background:  rgba(0, 0, 0, 0.349);;
-  backface-visibility: hidden;
-  border: 1px solid white;
-}
-
-.front{ background-color:  rgba(0, 0, 0, 0.349)}
-.front h3 {
-   position: absolute;
-   font-size: 38px;
-   margin-top: 200px;
-   color: #fff;
-   
-}
-.back{
-	height: 100%;
-	width: 100%;
-  transform: rotateY(180deg);
-  border: 1px solid white;
-}
-
-.back h3 {
-	display: block;
-  text-align: center;
-  margin: 10px 0;
-}
-
 
 
 @media (max-width: 800px)  {

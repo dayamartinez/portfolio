@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router";
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -6,81 +7,90 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
+import WorkIcon from '@material-ui/icons/Work';
+import PersonPinRoundedIcon from '@material-ui/icons/PersonPinRounded';
+import CodeSharpIcon from '@material-ui/icons/CodeSharp';
+import ExploreIcon from '@material-ui/icons/Explore';
+import Tooltip from '@material-ui/core/Tooltip';
 
-const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
-  hide: {
-    display: 'none',    
-  },
   drawer: {
-    width: drawerWidth,
-    whiteSpace: 'nowrap',    
+    whiteSpace: 'nowrap',   
   },
   drawerClose: {
+    justifyContent: 'center',
     overflowX: 'hidden', 
-    zIndex: 99,
-    backgroundColor: ' rgba(255, 255, 255, 0.198)',
-    width: theme.spacing(7) + 1,
+    backgroundColor: 'TRANSPARENT',
     [theme.breakpoints.up('sm')]: {
-      width: theme.spacing(9) + 1,
+      width: theme.spacing(7),
     },
   },
 }));
 
 export default function Bar() {
+  const History = useHistory()
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
 
   return (
       <div className='bar'>
-   <div id='bar'className={classes.root}>     
-      <Drawer
-        variant="permanent"
-        className={clsx(classes.drawer, {
-          [classes.drawerClose]: !open,
-        })}
-        classes={{
-          paper: clsx({
-            [classes.drawerClose]: !open,
-          }),
-        }}
-      >
-     
-        <List>
-          {[ 'Send email'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon><MailIcon color='secondary'/></ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon> <MailIcon color='secondary' /></ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-      
-    </div>
-      </div>
- 
+        <div id='bar'className={classes.root}>     
+          <Drawer
+              anchor="right"
+              variant="permanent"
+              className={clsx(classes.drawer)}
+              classes={{paper: clsx([classes.drawerClose])}}
+          >
+        
+            <List>   
+              <Tooltip title="Inicio" placement="left">        
+                <ListItem button>
+                  <ListItemIcon onClick={() => History.push('/')}><HomeIcon color='secondary'/></ListItemIcon>            
+                </ListItem> 
+                </Tooltip>         
+            </List>  
+
+            <Divider />   
+
+            <List>
+              <Tooltip title="Trabajos" placement="left">             
+                <ListItem button>
+                  <ListItemIcon onClick={() => History.push('/trabajos')}><WorkIcon color='secondary'/></ListItemIcon>           
+                </ListItem> 
+              </Tooltip>          
+            </List>
+
+            <List>
+              <Tooltip title="Proyectos" placement="left">
+                <ListItem button>
+                  <ListItemIcon onClick={() => History.push('/')}> <ExploreIcon color='secondary' /></ListItemIcon>             
+                </ListItem>
+              </Tooltip>          
+            </List>
+            
+            <List>
+              <Tooltip title="Herramientas" placement="left">
+                <ListItem button>
+                  <ListItemIcon onClick={() => History.push('/')}> <CodeSharpIcon color='secondary' /></ListItemIcon>             
+                </ListItem>  
+              </Tooltip>                 
+            </List>
+            
+            <Divider />
+            
+            <List>
+              <Tooltip title="Contactame" placement="left">
+                <ListItem button>
+                  <ListItemIcon onClick={() => History.push('/contactame')}> <PersonPinRoundedIcon color='secondary' /></ListItemIcon>             
+                </ListItem>
+              </Tooltip>
+            </List>
+          </Drawer>        
+       </div>
+     </div> 
   );
 }

@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import Home from './Components/Home'
 import Contactme from './Components/Contactme'
 import Bar from './Components/Bar'
+import Work from './Components/Works'
 import './App.css';
 import ParticleAnimation from 'react-particle-animation'
 
@@ -22,6 +23,7 @@ function App() {
         />
       <Route exact path='/' component={Home} />
       <Route path='/contactame' component={Contactme} />
+      <Route path='/trabajos' component={Work} />
       
     
     </div>

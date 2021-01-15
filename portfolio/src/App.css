@@ -5,7 +5,8 @@
   z-index: -1;
   background-size: cover;
 }
-/* Home */
+
+/* HOME */
 .home{
   text-align: center;
   float: left; 
@@ -25,12 +26,12 @@
   font-size: xx-large;
   font-weight: 700;
   font-style: italic;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
   box-sizing: border-box;
 }
 a{text-decoration: none;  font-style: italic;}
-.input-contactme{ display: flex; flex-direction: row }
+
 h5{ 
   font-weight:lighter; 
   color: rgba(255, 255, 255, 0.198);
@@ -41,28 +42,41 @@ span{
   font-variant-ligatures: historical-ligatures;
   cursor: default
 }
- 
 span:hover {
   color: rgb(245, 30, 102);
-  font-weight: 900;
-  
+  font-weight: 900;  
 }
-/* social */
+.input-contactme{ display: flex; flex-direction: row }
+
+/* SOCIAL */
 .social{
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 a h3{
   color: rgb(245, 30, 102);
   margin-right: 5px;
 }
+a h3:hover{
+  color:gray;
+}
+/* BAR */
 #bar{
   display: flex;
   float: left; 
-  position: relative; 
+  position: relative;
 }
 
-/* contactme */
+.bar svg:hover{
+    color:gray;
+    font-size: 28px;
+}
+.menu-resp{
+  display: none;
+}
+
+/* CONTACTME */
 #contactme{
   display: flex; 
   justify-content: space-evenly; 
@@ -73,20 +87,25 @@ a h3{
 }
 
 .contactme{  
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   margin: 5%;
   position:absolute;
   z-index: 99;
   width: 750px;
-  background-color: rgba(255, 255, 255, 0.561);    
+  background-color: rgba(255, 255, 255, 0.801);    
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  
 }
 .contactme-form{  
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  width: 100%;
+  box-sizing: border-box;  
 }
 
 #contactme h1, h4, p{
@@ -100,26 +119,50 @@ a h3{
 
 /* CARD */
 .card {
-margin: 0 40px;
+margin: 0 10px;
 }
+/* CARDWORK */
 
 
-@media (max-width: 800px)  {
+/* ------MOBILE------ */
+
+@media (max-width: 900px)  {
   span{
     font-size: 1em;
   }
    
   span:hover {
-    font-size: 1.01em;
+    font-size: 1em;
+  }
+  .home{
+    margin-top: 80px;
   }
   #me{
     display: flex;
     flex-direction: column-reverse;
   }
-  .contactme{  
-    margin: 8%;
+  #contactme{
+    display: flex; 
+    justify-content: center; 
     width: 100%;
-   
+    height: 100%;
+  }
+
+  .contactme{
+    width: 90%;margin-top: 85px;
+  }
+  .bar{
+    display: none;
+  }
+  .menu-resp{
+    display: flex;
+    text-align: center;
+    float: right;
+    position: fixed;
+    z-index: 100;
+    color: white;
+    
+
   }
  
 }

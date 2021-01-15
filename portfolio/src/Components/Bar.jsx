@@ -1,20 +1,11 @@
 import React from 'react';
 import { useHistory } from "react-router";
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+import { makeStyles, withStyles} from '@material-ui/core/styles';
+import {Drawer, List, Divider,ListItem, ListItemIcon, Tooltip, MenuItem} from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import WorkIcon from '@material-ui/icons/Work';
 import PersonPinRoundedIcon from '@material-ui/icons/PersonPinRounded';
-import CodeSharpIcon from '@material-ui/icons/CodeSharp';
-import ExploreIcon from '@material-ui/icons/Explore';
-import Tooltip from '@material-ui/core/Tooltip';
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -32,11 +23,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const StyledMenuItem = withStyles((theme) => ({
+  root: {
+    '&:focus': { backgroundColor: 'transparent',
+      '& .MuiListItemIcon-root, & .MuiListItemText-primary': { color: "gray"},
+    },
+  },
+}))(MenuItem);
+
 export default function Bar() {
   const History = useHistory()
   const classes = useStyles();
 
   return (
+    <div>
       <div className='bar'>
         <div id='bar'className={classes.root}>     
           <Drawer
@@ -63,27 +63,10 @@ export default function Bar() {
                 </ListItem> 
               </Tooltip>          
             </List>
-
-            <List>
-              <Tooltip title="Proyectos" placement="left">
-                <ListItem button>
-                  <ListItemIcon onClick={() => History.push('/')}> <ExploreIcon color='secondary' /></ListItemIcon>             
-                </ListItem>
-              </Tooltip>          
-            </List>
-            
-            <List>
-              <Tooltip title="Herramientas" placement="left">
-                <ListItem button>
-                  <ListItemIcon onClick={() => History.push('/')}> <CodeSharpIcon color='secondary' /></ListItemIcon>             
-                </ListItem>  
-              </Tooltip>                 
-            </List>
-            
             <Divider />
             
             <List>
-              <Tooltip title="Contactame" placement="left">
+              <Tooltip title="Contacto" placement="left">
                 <ListItem button>
                   <ListItemIcon onClick={() => History.push('/contactame')}> <PersonPinRoundedIcon color='secondary' /></ListItemIcon>             
                 </ListItem>
@@ -92,5 +75,26 @@ export default function Bar() {
           </Drawer>        
        </div>
      </div> 
+     
+
+     <div className='menu-resp'>
+    
+        <StyledMenuItem style={{color: 'white', marginBottom: '50px'}} onClick={() => History.push('/')}>
+        <HomeIcon />
+        <h6>Inicio</h6>      
+        </StyledMenuItem>
+
+        <StyledMenuItem style={{color: 'white', marginBottom: '50px'}} onClick={() => History.push('/trabajos')}>
+        <WorkIcon />
+        <h6>Trabajos</h6>   
+        </StyledMenuItem>
+
+        <StyledMenuItem style={{color: 'white', marginBottom: '50px'}} onClick={() => History.push('/contactame')}>
+        <PersonPinRoundedIcon />
+        <h6>Contacto</h6>   
+        </StyledMenuItem>
+      
+     </div>
+     </div>
   );
 }

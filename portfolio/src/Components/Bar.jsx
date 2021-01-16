@@ -79,18 +79,18 @@ export default function Bar() {
 
      <div className='menu-resp'>
     
-        <StyledMenuItem style={{color: 'white', marginBottom: '50px'}} onClick={() => History.push('/')}>
-        <HomeIcon />
+        <StyledMenuItem  onClick={() => History.push('/')}>
+        {/* <HomeIcon /> */}
         <h6>Inicio</h6>      
         </StyledMenuItem>
-
-        <StyledMenuItem style={{color: 'white', marginBottom: '50px'}} onClick={() => History.push('/trabajos')}>
-        <WorkIcon />
+        
+        <StyledMenuItem onClick={() => History.push('/trabajos')}>
+        {/* <WorkIcon /> */}
         <h6>Trabajos</h6>   
         </StyledMenuItem>
 
-        <StyledMenuItem style={{color: 'white', marginBottom: '50px'}} onClick={() => History.push('/contactame')}>
-        <PersonPinRoundedIcon />
+        <StyledMenuItem onClick={() => History.push('/contactame')}>
+        {/* <PersonPinRoundedIcon /> */}
         <h6>Contacto</h6>   
         </StyledMenuItem>
       

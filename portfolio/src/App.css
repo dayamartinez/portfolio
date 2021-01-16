@@ -1,3 +1,8 @@
+/* importa el tipo de letra a usar*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+body{
+  font-family: "Raleway", sans-serif !important;
+}
 .particles{  
   width: 100%;
   height: 100%; 
@@ -25,7 +30,6 @@
   text-align: left;
   font-size: xx-large;
   font-weight: 700;
-  font-style: italic;
   margin-top: 10px;
   margin-bottom: 5px;
   box-sizing: border-box;
@@ -46,7 +50,7 @@ span:hover {
   color: rgb(245, 30, 102);
   font-weight: 900;  
 }
-.input-contactme{ display: flex; flex-direction: row }
+.input-contactme a{ display: flex; flex-direction: row; color: rgb(245, 30, 102);}
 
 /* SOCIAL */
 .social{
@@ -54,7 +58,7 @@ span:hover {
   flex-direction: row;
   margin-bottom: 10px;
 }
-a h3{
+.social  a h3{
   color: rgb(245, 30, 102);
   margin-right: 5px;
 }
@@ -110,7 +114,6 @@ a h3:hover{
 
 #contactme h1, h4, p{
   color: black; 
-  font-style: italic;
 }
 #contactme .social{
   justify-content: center;
@@ -123,6 +126,11 @@ margin: 0 10px;
 }
 /* CARDWORK */
 
+.work {
+width: 100%;
+z-index: 99;
+}
+ 
 
 /* ------MOBILE------ */
 
@@ -130,7 +138,6 @@ margin: 0 10px;
   span{
     font-size: 1em;
   }
-   
   span:hover {
     font-size: 1em;
   }
@@ -143,26 +150,28 @@ margin: 0 10px;
   }
   #contactme{
     display: flex; 
-    justify-content: center; 
+   
     width: 100%;
     height: 100%;
   }
-
   .contactme{
-    width: 90%;margin-top: 85px;
+    width: 90%;
+    margin:85px 0 ;
   }
   .bar{
     display: none;
   }
-  .menu-resp{
+  .menu-resp{ 
+    width: 100%;
+    height: 45px;    
     display: flex;
-    text-align: center;
-    float: right;
+    justify-content: center;  
     position: fixed;
-    z-index: 100;
+    z-index: 100;   
     color: white;
-    
-
+    background-color: black;
+    border-bottom: 3px solid grey;
+    border-radius: 8px;
   }
  
 }

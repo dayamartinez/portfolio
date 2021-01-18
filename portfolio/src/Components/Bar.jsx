@@ -47,7 +47,7 @@ export default function Bar() {
           >
         
             <List>   
-              <Tooltip title="Inicio" placement="left">        
+              <Tooltip title="INICIO" placement="left">        
                 <ListItem button>
                   <ListItemIcon onClick={() => History.push('/')}><HomeIcon color='secondary'/></ListItemIcon>            
                 </ListItem> 
@@ -57,7 +57,7 @@ export default function Bar() {
             <Divider />   
 
             <List>
-              <Tooltip title="Trabajos" placement="left">             
+              <Tooltip title="TRABAJOS" placement="left">             
                 <ListItem button>
                   <ListItemIcon onClick={() => History.push('/trabajos')}><WorkIcon color='secondary'/></ListItemIcon>           
                 </ListItem> 
@@ -66,7 +66,7 @@ export default function Bar() {
             <Divider />
             
             <List>
-              <Tooltip title="Contacto" placement="left">
+              <Tooltip title="CONTACTO" placement="left">
                 <ListItem button>
                   <ListItemIcon onClick={() => History.push('/contactame')}> <PersonPinRoundedIcon color='secondary' /></ListItemIcon>             
                 </ListItem>
@@ -81,17 +81,17 @@ export default function Bar() {
     
         <StyledMenuItem  onClick={() => History.push('/')}>
         {/* <HomeIcon /> */}
-        <h6>Inicio</h6>      
+        <h6>INICIO</h6>      
         </StyledMenuItem>
         
         <StyledMenuItem onClick={() => History.push('/trabajos')}>
         {/* <WorkIcon /> */}
-        <h6>Trabajos</h6>   
+        <h6>TRABAJOS</h6>   
         </StyledMenuItem>
 
         <StyledMenuItem onClick={() => History.push('/contactame')}>
         {/* <PersonPinRoundedIcon /> */}
-        <h6>Contacto</h6>   
+        <h6>CONTACTO</h6>   
         </StyledMenuItem>
       
      </div>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'; 
 import silueta from '../Images/silueta.jpg'
-import me from '../Images/dj1.jpeg'
+import daya from '../Images/dj1.jpeg'
+// import me from '../Images/dj1.jpeg'
 import Toolbar from '@material-ui/core/Toolbar';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -25,7 +26,7 @@ export default function Bar() {
         <Toolbar>
           {auth ? 
                 <div>
-                    <img src={me} alt="imagen silueta" width='200px' height='200px' style={{borderRadius: '100px', padding: '2px'}}/>                  
+                    <img src={daya} alt="imagen silueta" width='200px' height='200px' style={{borderRadius: '100px', padding: '2px'}}/>                  
                 </div> : 
                 <div> 
                     <img src={silueta} alt="imagen silueta" width='200px' height='200px' style={{borderRadius: '100px', padding: '2px'}}/> 
